@@ -34,6 +34,23 @@ class SinglyLL {
 			}
 		}
 	}
+	
+	void reverse() {
+		if (root == null) {
+			System.out.println("empty list");
+		} else {
+			Node next;
+			Node prev = null;
+			Node curr = root;
+			do {
+				next = curr.next;
+				curr.next = prev;
+				prev = curr;
+				curr = next;
+			} while(curr != null);
+			root = prev;
+		}
+	}
 }
 
 
@@ -42,6 +59,8 @@ public class Singly {
 	public static void main(String[] args) {
 		SinglyLL  sll = new SinglyLL();
 		sll.insert(1);sll.insert(2);sll.insert(3);sll.insert(4);
+		//sll.display();
+		sll.reverse();
 		sll.display();
 
 	}

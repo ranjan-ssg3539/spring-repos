@@ -3,6 +3,8 @@ package prac.collection;
 public class StringPalinndromeSubString {
 
 	public static void main(String[] args) {
+		
+		
 		String str = "aaaa";
 		//a a a a  aa aa aa aaa aaa aaaa
 		//System.out.println(isPalindrome(str));
