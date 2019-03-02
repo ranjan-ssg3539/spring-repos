@@ -1,4 +1,4 @@
-package prac.collection;
+package collection.prac;
 
 import java.util.ArrayList;
 import java.util.HashSet;

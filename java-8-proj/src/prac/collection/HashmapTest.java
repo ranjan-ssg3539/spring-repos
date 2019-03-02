@@ -24,7 +24,7 @@ public class HashmapTest {
 		hm.put("c", 2);
 		
 		List<Entry<String, Integer>> list = new ArrayList<Entry<String, Integer>>();
-		Collections.sort(list, new Comparator<Entry<String, Integer>>());
+		//Collections.sort(list, new Comparator<Entry<String, Integer>>());
 		
 		
 		Collections.sy

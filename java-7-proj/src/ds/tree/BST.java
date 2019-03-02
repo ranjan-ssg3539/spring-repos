@@ -12,21 +12,27 @@ class Tree {
 		root = null;
 	}
 	
+	void printLeaves(Node root) {
+		if (root == null) {
+			return;
+		} else if (root.left == null && root.right == null) {
+			System.out.print(" " + root.val);
+		} else if (root.left == null && root.right != null) {
+			printLeaves(root.right);
+		} else if (root.right == null && root.left != null) {
+			printLeaves(root.left);
+		} else if (root.right != null && root.left != null) {
+			printLeaves(root.left);
+			printLeaves(root.right);
+		} 
+	}
+	
 	void displayInorder(Node root) {
 		if (root == null) return;
 		displayInorder(root.left);
 		System.out.print(" " + root.val);
 		displayInorder(root.right);
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	void displayPreorder(Node root) {
 		if (root == null) {
@@ -83,6 +89,8 @@ class Tree {
 	void insert(int newVal) {
 		Node newNode = new Node();
 		newNode.val = newVal;
+		newNode.right = null;
+		newNode.left = null;
 		if (root == null) {
 			root = newNode;
 		} else {
@@ -112,7 +120,9 @@ public class BST {
 		t.insert(10); t.insert(15); t.insert(5); t.insert(3); t.insert(8); t.insert(13); t.insert(17); 
 		//t.printLevelOrder();	
 		//t.displayPreorder(t.root);
-		t.displayInorder(t.root);
+		//t.displayInorder(t.root);
+		System.out.println("Printing leaf nodes");
+		t.printLeaves(t.root);
 
 	}
 

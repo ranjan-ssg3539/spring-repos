@@ -1,4 +1,4 @@
-package prac.collection;
+package collection.prac;
 
 import java.util.HashMap;
 import java.util.Map;

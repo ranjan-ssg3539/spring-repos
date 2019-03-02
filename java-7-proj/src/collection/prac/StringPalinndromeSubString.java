@@ -1,4 +1,4 @@
-package prac.collection;
+package collection.prac;
 
 public class StringPalinndromeSubString {
 
